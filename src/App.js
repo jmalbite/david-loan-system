@@ -2,12 +2,14 @@ import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Login from './pages/login/login';
+import SignUp from './pages/signup/signup';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
-        <Login />
+        {/* <Login /> */}
+        <SignUp />
       </div>
       ;
     </BrowserRouter>
