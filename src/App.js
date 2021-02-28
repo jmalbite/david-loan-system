@@ -13,7 +13,6 @@ function App() {
         {/* <SignUp /> */}
         <DashBoard />
       </div>
-      ;
     </BrowserRouter>
   );
 }
