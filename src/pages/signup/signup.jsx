@@ -76,8 +76,11 @@ const Signup = () => {
                 </Button>
               </Grid>
             </Grid>
+            {/* end of inside grid paper  */}
           </Paper>
+          {/* end of paper component */}
         </form>
+        {/* end of paper component */}
       </Grid>
     </Grid>
   );
