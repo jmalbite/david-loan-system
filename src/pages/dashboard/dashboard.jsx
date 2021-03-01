@@ -11,13 +11,13 @@ const Dashboard = () => {
       className="dashboard"
       style={{
         display: 'flex',
-        justifyContent: 'center',
+        justifyItems: 'center',
         marginTop: '30px',
       }}
     >
       <Grid container direction="column" spacing={2}>
         <Grid container justify="center">
-          <Grid item xs={11} sm>
+          <Grid item xs={11} sm={5}>
             <Paper
               elevation={2}
               style={{ padding: 20, backgroundColor: '#EDF4E0' }}
@@ -68,7 +68,7 @@ const Dashboard = () => {
           <Typography variant="h6">PAYMENT HISTORY</Typography>
         </Grid>
 
-        <Grid container justify="center">
+        <Grid container item xs={12} justify="center">
           <Paper elevation={3} style={{ padding: 18 }}>
             <Grid container spacing={3}>
               <Grid item>
