@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Login from './pages/login/login';
 import SignUp from './pages/signup/signup';
-import DashBoard from './pages/dashboard/dashboard';
+import Dashboard from './pages/dashboard/dashboard';
 import NavBar from './components/navbar/navbar';
 
 function App() {
@@ -12,12 +12,12 @@ function App() {
       <div className="App">
         <NavBar />
         <Switch>
-          <Route exact path="/">
-            <DashBoard />
+          <Route exact path="/login">
+            <Login />
           </Route>
 
-          <Route path="/login">
-            <Login />
+          <Route path="/dashboard">
+            <Dashboard />
           </Route>
 
           <Route path="/signup">

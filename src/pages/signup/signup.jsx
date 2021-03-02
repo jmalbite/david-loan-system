@@ -13,7 +13,7 @@ const Signup = () => {
       <Grid item xs={10} sm={6} md={4} lg={4}>
         <form>
           <Paper style={{ padding: 20 }}>
-            <Grid container direction="column" spacing="1">
+            <Grid container direction="column" spacing={1}>
               <Grid item xs sm>
                 <Typography variant="h5" color="textPrimary">
                   SIGN UP

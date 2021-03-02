@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimateNumber from 'react-animated-number';
+import AnimatedNumber from 'react-animated-number';
 import moment from 'moment';
 
 import { Grid, Paper, Typography } from '@material-ui/core';
@@ -28,7 +28,7 @@ const Dashboard = () => {
                   <Typography variant="subtitle2" color="textPrimary">
                     Total Balance
                   </Typography>
-                  <AnimateNumber
+                  <AnimatedNumber
                     value={6900}
                     formatValue={(value) => `₱ ${value.toFixed(2)}`}
                     duration={400}
@@ -40,7 +40,7 @@ const Dashboard = () => {
                   <Typography variant="subtitle2" color="textPrimary">
                     Total Paid
                   </Typography>
-                  <AnimateNumber
+                  <AnimatedNumber
                     value={500}
                     formatValue={(value) => `₱ ${value.toFixed(2)}`}
                     duration={400}
@@ -52,7 +52,7 @@ const Dashboard = () => {
                   <Typography variant="subtitle2" color="textPrimary">
                     Total Obligation
                   </Typography>
-                  <AnimateNumber
+                  <AnimatedNumber
                     value={7400}
                     formatValue={(value) => `₱ ${value.toFixed(2)}`}
                     duration={400}
@@ -77,7 +77,7 @@ const Dashboard = () => {
 
               <Grid item>
                 <Typography variant="subtitle2">amount paid</Typography>
-                <AnimateNumber
+                <AnimatedNumber
                   value={7400}
                   formatValue={(value) => `₱ ${value.toFixed(2)}`}
                   duration={400}
@@ -87,7 +87,7 @@ const Dashboard = () => {
 
               <Grid item>
                 <Typography variant="subtitle2">new balance</Typography>
-                <AnimateNumber
+                <AnimatedNumber
                   value={7400}
                   formatValue={(value) => `₱ ${value.toFixed(2)}`}
                   duration={400}
