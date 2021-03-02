@@ -1,6 +1,9 @@
 import React from 'react';
 
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { Link } from 'react-router-dom';
+import { Menu, GraphicEq } from '@material-ui/icons';
+import { useTheme } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -9,9 +12,6 @@ import {
   Button,
   Grid,
 } from '@material-ui/core';
-import { Menu, GraphicEq } from '@material-ui/icons';
-import { useTheme } from '@material-ui/core/styles';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const NavBar = () => {
   const theme = useTheme();
@@ -55,7 +55,7 @@ const NavBar = () => {
                 <Grid item>
                   <Button variant="outlined" color="inherit">
                     <Link
-                      to="/login"
+                      to="/"
                       style={{ textDecoration: 'none', color: 'inherit' }}
                     >
                       Login
