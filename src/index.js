@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+
+//imported libraries
 import rootReducer from './store/reducer/rootReducer';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
