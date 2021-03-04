@@ -14,7 +14,7 @@ const Breakdowns = ({ paymentsHistory }) => {
       {paymentsHistory.map((payment) => (
         <Grid container item xs={12} justify="center" key={payment.id}>
           <Paper elevation={3} style={{ padding: 18 }}>
-            <Grid container spacing={3}>
+            <Grid item container spacing={3}>
               <Grid item>
                 <Typography>{moment(payment.date).format('LL')}</Typography>
               </Grid>
