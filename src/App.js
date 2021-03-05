@@ -5,6 +5,7 @@ import Login from './pages/login/login';
 import SignUp from './pages/signup/signup';
 import Dashboard from './pages/dashboard/dashboard';
 import NavBar from './components/navbar/navbar';
+import AddPayment from './pages/addpayment/addpayment';
 
 function App() {
   return (
@@ -22,6 +23,10 @@ function App() {
 
           <Route path="/signup">
             <SignUp />
+          </Route>
+
+          <Route path="/addpayment">
+            <AddPayment />
           </Route>
         </Switch>
       </div>
