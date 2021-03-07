@@ -8,7 +8,7 @@ const AddPayment = ({ addPayment }) => {
   const tempDate = new Date();
   const [payment, setPayment] = useState({
     date: tempDate,
-    amountToPay: 0,
+    amountPaid: 0,
   });
 
   const handleChange = (e) => {
@@ -18,7 +18,6 @@ const AddPayment = ({ addPayment }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(payment);
     addPayment(payment);
   };
 
@@ -55,7 +54,7 @@ const AddPayment = ({ addPayment }) => {
                 <Grid container item justify="center">
                   <Grid item xs={10} sm={8} md={8}>
                     <TextField
-                      name="amountToPay"
+                      name="amountPaid"
                       label="Amount paid"
                       type="number"
                       fullWidth

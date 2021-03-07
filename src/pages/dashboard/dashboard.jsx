@@ -6,6 +6,8 @@ import StatusBox from '../../components/payment breakdown/statusBox/statusBox';
 import Breakdown from '../../components/payment breakdown/breakdowns/breakdowns';
 
 import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 const Dashboard = (props) => {
   const { payments } = props;
@@ -18,6 +20,7 @@ const Dashboard = (props) => {
         marginTop: '30px',
       }}
     >
+      {console.log(payments)}
       <Grid container direction="column" spacing={2}>
         <StatusBox />
         <Breakdown paymentsHistory={payments} />
@@ -27,9 +30,14 @@ const Dashboard = (props) => {
 };
 
 const mapStateToProps = (state) => {
+  console.log(state);
   return {
-    payments: state.payment.payments,
+    //payments: state.payment.payments,
+    payments: state.firestore.ordered.paymentHistory,
   };
 };
 
-export default connect(mapStateToProps)(Dashboard);
+export default compose(
+  connect(mapStateToProps),
+  firestoreConnect([{ collection: 'paymentHistory' }])
+)(Dashboard);

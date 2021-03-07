@@ -10,7 +10,6 @@ const Breakdowns = ({ paymentsHistory }) => {
       <Grid item>
         <Typography variant="h6">PAYMENT HISTORY</Typography>
       </Grid>
-
       {paymentsHistory.map((payment) => (
         <Grid container item xs={12} justify="center" key={payment.id}>
           <Paper elevation={3} style={{ padding: 18 }}>
@@ -23,7 +22,7 @@ const Breakdowns = ({ paymentsHistory }) => {
                 <Typography variant="subtitle2">amount paid</Typography>
                 <AnimatedNumber
                   value={payment.amountPaid}
-                  formatValue={(value) => `₱ ${value.toFixed(2)}`}
+                  // formatValue={(value) => `₱ ${value.toFixed(2)}`}
                   duration={400}
                   style={{ fontSize: 15, color: '#5eda96' }}
                 />
@@ -32,8 +31,8 @@ const Breakdowns = ({ paymentsHistory }) => {
               <Grid item>
                 <Typography variant="subtitle2">new balance</Typography>
                 <AnimatedNumber
-                  value={payment.balance}
-                  formatValue={(value) => `₱ ${value.toFixed(2)}`}
+                  value={payment.new_balance}
+                  // formatValue={(value) => `₱ ${value.toFixed(2)}`}
                   duration={400}
                   style={{ fontSize: 15, color: '#f64c71' }}
                 />
