@@ -4,7 +4,7 @@ export const addPayment = (payment) => {
     //thunk in index.js with parameters
     //async functions
     const firestore = getFirestore();
-    console.log('yey', getState);
+
     firestore
       .collection('paymentHistory')
       .add({

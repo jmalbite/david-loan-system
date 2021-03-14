@@ -21,8 +21,8 @@ const Breakdowns = ({ paymentsHistory }) => {
               <Grid item>
                 <Typography variant="subtitle2">amount paid</Typography>
                 <AnimatedNumber
-                  value={payment.amountPaid}
-                  // formatValue={(value) => `₱ ${value.toFixed(2)}`}
+                  value={parseInt(payment.amountPaid)}
+                  formatValue={(value) => `₱ ${value.toFixed(2)}`}
                   duration={400}
                   style={{ fontSize: 15, color: '#5eda96' }}
                 />
@@ -31,8 +31,8 @@ const Breakdowns = ({ paymentsHistory }) => {
               <Grid item>
                 <Typography variant="subtitle2">new balance</Typography>
                 <AnimatedNumber
-                  value={payment.new_balance}
-                  // formatValue={(value) => `₱ ${value.toFixed(2)}`}
+                  value={parseInt(payment.new_balance)}
+                  formatValue={(value) => `₱ ${value.toFixed(2)}`}
                   duration={400}
                   style={{ fontSize: 15, color: '#f64c71' }}
                 />

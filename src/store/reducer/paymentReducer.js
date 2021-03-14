@@ -11,6 +11,7 @@ const paymentReducer = (state = initState, action) => {
       return state;
 
     default:
+      console.log(state);
       return state;
   }
 };
