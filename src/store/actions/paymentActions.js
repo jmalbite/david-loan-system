@@ -4,12 +4,15 @@ export const addPayment = (payment) => {
     //thunk in index.js with parameters
     //async functions
     const firestore = getFirestore();
+    console.log(payment);
 
     firestore
       .collection('paymentHistory')
       .add({
         ...payment,
-        new_balance: 6000,
+        amountPaid: parseInt(payment.amountPaid),
+        date: payment.date,
+        new_balance: 200,
       })
       .then(() => {
         dispatch({ type: 'ADD_PAYMENT', payment });
