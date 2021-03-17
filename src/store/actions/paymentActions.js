@@ -4,8 +4,6 @@ export const addPayment = (payment) => {
     //thunk in index.js with parameters
     //async functions
     const firestore = getFirestore();
-    console.log(payment);
-
     firestore
       .collection('paymentHistory')
       .add({
@@ -20,5 +18,12 @@ export const addPayment = (payment) => {
       .catch((err) => {
         dispatch({ type: 'ADD_PAYMENT_UNSUCCESSFUL', err });
       });
+  };
+};
+
+export const paymnetHistorytoState = (fbdata) => {
+  return {
+    type: 'MOVE_DATA_TO_STATE',
+    payload: fbdata,
   };
 };

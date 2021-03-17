@@ -10,8 +10,13 @@ const paymentReducer = (state = initState, action) => {
       console.log('PAYMENT UNSUCCESSFUL');
       return state;
 
+    case 'MOVE_DATA_TO_STATE':
+      return {
+        ...state,
+        payments: action.payload,
+      };
+
     default:
-      console.log(state);
       return state;
   }
 };
